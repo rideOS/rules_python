@@ -107,9 +107,8 @@ Args:
 pip3_import = repository_rule(
     attrs = {
         "requirements": attr.label(
-            allow_files = True,
             mandatory = True,
-            single_file = True,
+            allow_single_file = True,
         ),
         "_script": attr.label(
             executable = True,
